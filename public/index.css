@@ -60,7 +60,7 @@ body {
 #container h3 {
     margin-left: 2%;
     font-size: 40px;
-    margin-top: -25%;
+    margin-top: -20%;
 }
 
 #container p {
@@ -71,7 +71,7 @@ body {
     margin-left: 2%;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 450px) {
     #container01 img{
     height: 120px;
     width: 120px;
