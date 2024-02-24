@@ -1,4 +1,4 @@
-const API_KEY = 'f59bb9999c52213653543e326e788e84'
+  const API_KEY = 'f59bb9999c52213653543e326e788e84'
 
 document.querySelector('#search-bar').addEventListener('click', function (event) {
     event.preventDefault(); // Prevent default behavior of the click event
@@ -14,7 +14,6 @@ async function getData() {
         const data = await res.json();
         console.log(data); // Use data.name for the city name
         const name = (data[0].name)
-        // const state = (data[0].state)
         const latitude = (data[0].lat)
         const longitude = (data[0].lon)
         // console.log(name,latitude,longitude);
@@ -43,7 +42,6 @@ async function weather (name,latitude,longitude){
 function climate(data,name) {
     let container = document.querySelector('#container');
     container.innerHTML='';
-    // console.log(state);
     let climate = document.createElement('div');
     climate.classList.add('report01');
 
@@ -51,7 +49,8 @@ function climate(data,name) {
     <img src="https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@4x.png" alt="weather-icon">
     <h2> ${data.list[0].weather[0].description}</h2>
     <h3>${name} </h3>
-    <h1>Temperature: ${(data.list[0].main.temp - 273.15).toFixed(2)}°C</h1>
+    <h1>Temperature: ${data.list[0].main.temp}&deg;C</h1>
+        
         <h4 class="top">${data.list[0].dt_txt.split(" ")[0]} </h4>
 
         <p>Humidity: ${data.list[0].main.humidity}%</p>
@@ -79,7 +78,7 @@ function forecast(data) {
         <h3> ${weatherData.dt_txt.split(" ")[0]}</h3>
         <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png" alt="weather-icon">
         <h2>${weatherData.weather[0].description}</h2>
-            <p>Temperature: ${(weatherData.main.temp - 273.15).toFixed(2)}°C</p>
+            <p>Temperature: ${weatherData.main.temp} K</p>
             <p>Humidity: ${weatherData.main.humidity}%</p>
             <p>Visibility: ${weatherData.visibility}</p>
             <p>Wind Speed: ${weatherData.wind.speed} m/s</p>

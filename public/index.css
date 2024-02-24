@@ -2,6 +2,10 @@ body {
     background-color: #F1F1F2;
 }
 
+.wrapper {
+    /* border: 1px solid red; */
+    /* display: flex; */
+}
 
 #container {
     color: white;
@@ -23,7 +27,7 @@ body {
 
 .report {
     background-color: #81d1e3;
-    padding: 10% 10%;
+    padding: 10px 10px;
     border-radius: 10px;
     font-size: 15px;
     /* color: rgb(114, 114, 114); */
@@ -60,7 +64,7 @@ body {
 #container h3 {
     margin-left: 2%;
     font-size: 40px;
-    margin-top: -20%;
+    margin-top: -25%;
 }
 
 #container p {
@@ -71,7 +75,52 @@ body {
     margin-left: 2%;
 }
 
+@media (max-width: 450px) {
+    #container01 img{
+    height: 120px;
+    width: 120px;
+    /* margin-top: -30px; */
+}
 
+#container h1{
+    display: none;
+}
+#container h3 {
+    margin-left: 2%;
+    font-size: 34px;
+    margin-top: 30px;
+    /* margin-top: -25%; */
+}
+#container img{
+    margin-left: -1px;
+}
+#container h2{
+    margin-left: -1px;
+}
+#container h4{
+    margin-top: 20px;
+}
+#search-city{
+    /* padding: 1px 1px; */
+    /* color:red */
+    width: 90px;
+    font-size: 12px;
+}
+#search-bar{
+    margin-bottom: 20px;
+}
+.report{
+    margin-top: 20px;
+    padding: 12px 65px;
+    /* border: 2px solid red; */
+}
+.report p{
+    font-size: 20px;
+}
+.report h3{
+    font-size: 25px;
+}
+}
 img {
     height: 120px;
     width: 120px;
@@ -121,56 +170,4 @@ h2{
 label{
     font-size: 20px;
     font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
-    #container01 img {
-        height: 120px;
-        width: 120px;
-        margin-top: -30px;
-    }
-
-    #container h1 {
-        display: none;
-    }
-
-    #container h3 {
-        margin-left: 2%;
-        font-size: 34px;
-        margin-top: 30px;
-    }
-
-    #container img {
-        display: none;
-    }
-
-    #container h2 {
-        margin-left: -1px;
-    }
-
-    #container h4 {
-        margin-top: 20px;
-    }
-
-    #search-city {
-        width: 90px;
-        font-size: 12px;
-    }
-
-    #search-bar {
-        margin-bottom: 20px;
-    }
-
-    .report {
-        margin-top: 20px;
-        padding: 80px;
-    }
-
-    .report p {
-        font-size: 16px;
-    }
-
-    .report h3 {
-        font-size: 20px;
-    }
 }
