@@ -2,10 +2,6 @@ body {
     background-color: #F1F1F2;
 }
 
-.wrapper {
-    /* border: 1px solid red; */
-    /* display: flex; */
-}
 
 #container {
     color: white;
@@ -75,7 +71,7 @@ body {
     margin-left: 2%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 850px) {
     #container01 img{
     height: 120px;
     width: 120px;
