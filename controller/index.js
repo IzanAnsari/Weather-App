@@ -13,23 +13,25 @@ async function getData() {
         // console.log(res);
         const data = await res.json();
         console.log(data); // Use data.name for the city name
+        const state = (data[0].state)
+        // console.log(state);
         const name = (data[0].name)
         const latitude = (data[0].lat)
         const longitude = (data[0].lon)
         // console.log(name,latitude,longitude);
-        weather(name,latitude,longitude)
+        weather(name,latitude,longitude,state)
         // climate(data);
     } catch (error) {
         console.log(error);
     }
 }
 
-async function weather (name,latitude,longitude){
+async function weather (name,latitude,longitude,state){
     try {
         const res01 = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`);
         const myres01 = await res01.json();
         console.log(myres01);
-        climate(myres01,name)
+        climate(myres01,name,state)
         forecast(myres01)
     } catch (error) {
         console.log(error);
@@ -39,7 +41,7 @@ async function weather (name,latitude,longitude){
 // console.log(input);
 
 
-function climate(data,name) {
+function climate(data,name,state) {
     let container = document.querySelector('#container');
     container.innerHTML='';
     let climate = document.createElement('div');
@@ -48,7 +50,7 @@ function climate(data,name) {
     climate.innerHTML = `
     <img src="https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@4x.png" alt="weather-icon">
     <h2> ${data.list[0].weather[0].description}</h2>
-    <h3>${name} </h3>
+    <h3>${name} , ${state} </h3>
     <h1>Temperature: ${data.list[0].main.temp}&deg;C</h1>
         
         <h4 class="top">${data.list[0].dt_txt.split(" ")[0]} </h4>
