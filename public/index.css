@@ -128,10 +128,9 @@ label{
 }
 #weather-map{
     border: 1px solid #ccc;
-     margin: 40px 0%;
+     margin: 40px 10px;
      width: 1120px;
      height: 500px;
-   
 }
 
 @media (max-width: 450px) {
