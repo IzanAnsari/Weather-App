@@ -126,7 +126,13 @@ label{
     font-size: 20px;
     font-weight: bold;
 }
-
+#weather-map{
+    border: 1px solid #ccc;
+     margin: 40px 0%;
+     width: 1120px;
+     height: 500px;
+   
+}
 
 @media (max-width: 450px) {
     #container01 img{
@@ -182,5 +188,11 @@ label{
 }
 .report h3{
     font-size: 25px;
+}
+#weather-map{
+    margin: 20px 5px;
+    height: 500px;
+    width: 98%;
+
 }
 }
